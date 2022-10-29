@@ -1,6 +1,6 @@
 {
-  "homepage": "https://reskynov.github.io/todo-list/",
-  "name": "todo-list",
+  "homepage": "https://zdienos-todolist.netlify.app/",
+  "name": "zdienos-todolist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
