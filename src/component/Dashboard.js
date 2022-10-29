@@ -102,7 +102,9 @@ function Dashboard() {
 
         {/* Modal DELETE Activity */}
         { modalDelOpened && (
-          <div className='modal-background'>
+          <div className='modal-background' onClick={() => {
+            setModalDelOpened(!modalDelOpened)
+          }}>
             <div className='modal-content-del' data-cy="modal-delete">
               <div className='modal-header'>
                 <img data-cy="modal-delete-icon" src={alertDel} alt="alert-img"></img>
