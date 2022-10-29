@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Route, Switch } from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Dashboard from "./component/Dashboard";
 import ItemList from "./component/ItemList";
 import Navbar from "./component/Navbar";
@@ -12,8 +12,11 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route path="/todo-list/" exact component={Dashboard} />
-        <Route path="/detail/:id" exact component={ItemList} />
+        <Route exact path="/">
+            <Redirect to="/todo-list" />
+        </Route>
+        <Route path="/todo-list/" component={Dashboard} />
+        <Route path="/detail/:id" component={ItemList} />
       </Switch>
     </BrowserRouter>
     </div>
